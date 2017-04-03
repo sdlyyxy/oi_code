@@ -1,1 +1,10 @@
-*.exe
+*
+!*/
+!*.cpp
+!*.txt
+!.gitignore
+!*.c
+!*.sh
+!*.bat
+
+# *.exe
