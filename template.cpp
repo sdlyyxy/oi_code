@@ -6,18 +6,15 @@
 #include<cstring>
 #include<cctype>
 #include<vector>
+#include<ctime>
+#include<cstdlib>
+#include<set>
+#include<stack>
+#include<map>
 using namespace std;
+typedef long long LL;
 #define REP(i,n) for(int (i)=0;(i)<(n);(i)++)
 int main(){
-	int n,m;
-	while(scanf("%d%d",&n,&m)==2){
-		double ans=0;
-		for(int i=1;i<n;i++){
-			double pos=(double)i/n*(n+m);
-			ans+=fabs(pos-round(pos))/(n+m);
-		}
-		printf("%.4lf\n",ans*10000);
-	}
 	return 0;
 }
 

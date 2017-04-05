@@ -10,12 +10,14 @@
 #include<ctime>
 using namespace std;
 #define REP(i,begin,end) for(int (i)=(begin);(i)<(end);i++)
-const int list[]={ 	4, 22, 27, 58, 85, 94, 121, 166, 202, 265, 274, 319, 346, 355, 378, 382, 391, 438, 454, 483, 517, 526, 535, 562, 576, 588, 627, 634, 636, 645, 648, 654, 663, 666, 690, 706, 728, 729, 762, 778, 825, 852, 861, 895, 913, 915, 922, 958, 985, 1086, 1111, 1165};
 int main(){
-	int a;
+	long long a;
 	cin>>a;
-	cout<<list[a-1]<<endl;
+	if(a<13){
+		cout<<(1LL<<a)<<endl;
+	}else{
+		cout<<(8092LL<<(a-13))<<endl;
+	}
 	return 0;
 }
-//OSIS Smith(joke) number....
-//Traditionally the first problem of April Fools Day contest asks to recognize a sequence of integers by problem title and (this time) a single data point. OEIS search for just the given number isn't going to give a result ¡ª or rather is going to give too many to be useful. However, if you look for the problem title, the first result for "numbers joke" query will give you https://oeis.org/A006753 "Smith (or joke) numbers", which has 27 as its 3rd element.
+//This problem asked to figure out an integer sequence from two samples and problem title. It turned out to be surprisingly hard, a lot harder than I anticipated. A quick search through OEIS shows that while there are a lot of sequences which have these two numbers in them, only one is related to Leonardo da Vinci (and if you're looking for da Vinci, there are only two sequences overall). http://oeis.org/A221180 is an erroneous series of powers of 2, written down by da Vinci in his diaries and available as part of "Codex Madrid I".
