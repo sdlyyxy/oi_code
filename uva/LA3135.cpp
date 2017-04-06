@@ -27,11 +27,36 @@ LL lcm(LL a,LL b){return a/gcd(a,b)*b;}
 #define MSET(a,x) memset((a),(x),sizeof(a))
 #define lowbit(x) ((x)&(-(x)))
 #define MYIN freopen("d:/in.txt","r",stdin)
-#define MYOUT freopen("d:/out.txt","w",stdout)
 inline int readint(int &n){return scanf("%d",&n);}
+struct Item{
+	int qnum,period,time;
+	bool operator < (const Item &a) const{
+		return time>a.time || (time==a.time && qnum>a.qnum);
+	}
+};
 int main(){
 #ifdef LOCAL
+	puts("hehe");
+	MYIN;
 #endif
+	priority_queue<Item> pq;
+	char s[20];
+	while(scanf("%s",s) && s[0]!='#'){
+		Item item;
+		scanf("%d%d",&item.qnum,&item.period);
+		item.time=item.period;
+		pq.push(item);
+	}
+	int K;
+	readint(K);
+	while(K--){
+		Item item=pq.top();
+		pq.pop();
+		printf("%d\n",item.qnum);
+		item.time+=item.period;
+		pq.push(item);
+	}
 	return 0;
 }
+
 
