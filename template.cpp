@@ -13,7 +13,9 @@
 #include<map>
 using namespace std;
 typedef long long LL;
-#define REP(i,n) for(int (i)=0;(i)<(n);(i)++)
+LL gcd(LL a,LL b){return b?gcd(b,a%b):a;}
+LL lcm(LL a,LL b){return a/gcd(a,b)*b;}
+#define REP(i,begin,end) for(int (i)=(begin);(i)<(end);(i)++)
 int main(){
 	return 0;
 }
