@@ -15,6 +15,7 @@
 #include<queue>
 #include<list>
 #include<deque>
+#include<fstream>
 using namespace std;
 typedef long long LL;
 const double PI=acos(-1.0);
@@ -33,6 +34,12 @@ inline int readint(int &n){return scanf("%d",&n);}
 int main(){
 #ifdef LOCAL
 #endif
+	ofstream ofile("d:/out.txt",ios::binary);
+	int a=49;
+	ofile.write((char*)(&a),sizeof a);
+	ofile<<a;
 	return 0;
+
 }
+
 

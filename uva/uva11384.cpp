@@ -30,9 +30,17 @@ LL lcm(LL a,LL b){return a/gcd(a,b)*b;}
 #define MYOUT freopen("d:/out.txt","w",stdout)
 #define LOG printf("Tag at line %d.\n",__LINE__)
 inline int readint(int &n){return scanf("%d",&n);}
+int f(int x){
+	return x==1?1:f(x/2)+1;
+}
 int main(){
 #ifdef LOCAL
 #endif
+	int n;
+	while(readint(n)==1){
+		printf("%d\n",f(n));
+	}
 	return 0;
 }
+
 
